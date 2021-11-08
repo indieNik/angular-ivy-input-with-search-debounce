@@ -1,0 +1,15 @@
+<form>
+  <div class="si-wrapper">
+    <label for="si-input">Filter Names</label>
+    <input
+      id="si-input"
+      class="si-input"
+      type="search"
+      (keyup)="trackInputChanges($event)"
+      placeholder="3 or more characters..."
+    />
+    <div class="si-results" [class.open]="searchItems?.length">
+      <div *ngFor="let item of searchItems" class="si-result">{{ item }}</div>
+    </div>
+  </div>
+</form>

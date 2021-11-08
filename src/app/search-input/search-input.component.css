@@ -1,0 +1,35 @@
+.si-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 20rem;
+}
+
+.si-input {
+  width: 100%;
+}
+
+.si-results {
+  display: none;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  background-color: #eee;
+  height: 10rem;
+  overflow-y: scroll;
+}
+
+.si-results.open {
+  display: flex;
+  border-radius: 0 0 0.3rem 0.3rem;
+  padding: 0.5em;
+}
+
+.si-results.open .si-result {
+  padding: 0.3em;
+  cursor: pointer;
+}
+
+.si-results.open .si-result:hover {
+  background-color: #fff;
+}
