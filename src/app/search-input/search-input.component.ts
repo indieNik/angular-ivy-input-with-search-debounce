@@ -15,7 +15,7 @@ export class SearchInputComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    this.loadNames();
+    // this.loadNames();
     this._searchSub = this.searchText$
       .pipe(debounceTime(700))
       .subscribe((str) => {
@@ -30,7 +30,7 @@ export class SearchInputComponent implements OnInit, OnDestroy {
 
   loadNames() {
     this.searchItems = [...names];
-    // console.log(`this.searchItems: ${this.searchItems}`);
+    console.log(`this.searchItems: ${this.searchItems}`);
   }
 
   trackInputChanges(e) {
